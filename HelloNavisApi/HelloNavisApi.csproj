@@ -131,20 +131,44 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\icon16.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\icon32.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>echo Configuration: $(Configuration)
+    <PostBuildEvent>
+		echo Configuration: $(Configuration)
 
-SET PLUGINNAME=HelloNavisApi0.1.0.0
-SET ROOTFOLDER=%25Program Files%2525
-SET PLUGINVERSION=$(Configuration)
-SET PLUGINVERSION=%25PLUGINVERSION:Debug=%25
-SET PLUGINVERSION=%25PLUGINVERSION:Release=%25
+		SET PLUGINNAME=HelloNavisApi0.1.0.0
+		SET ROOTFOLDER=%25Program Files%2525
+		SET PLUGINVERSION=$(Configuration)
+		SET PLUGINVERSION=%25PLUGINVERSION:Debug=%25
+		SET PLUGINVERSION=%25PLUGINVERSION:Release=%25
 
-SET PARENTFOLDER=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\%25PLUGINVERSION%25
-SET PLUGINFOLDER=%25PARENTFOLDER%25\%25PLUGINNAME%25
+		SET PARENTFOLDER=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\%25PLUGINVERSION%25
+		SET PLUGINFOLDER=%25PARENTFOLDER%25\%25PLUGINNAME%25
 
+		set path=D:\HelloNavisApi\HelloNavisApi\HelloNavisApi\HelloNavis.xaml
+		set images=D:\HelloNavisApi\HelloNavisApi\HelloNavisApi\Images
 
-</PostBuildEvent>
+		set addinPath=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\HelloNavisApi\
+		set addinPath1=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\HelloNavisApi\en-US\
+		set addinPath2=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\HelloNavisApi\Images\
+
+		mkdir "%25addinPath1%25"
+		mkdir "%25addinPath2%25"
+
+		copy /Y "%25path%25" "%25addinPath%25"
+		copy /Y "%25path%25" "%25addinPath1%25"
+		copy "%25images%25" "%25addinPath2%25"
+		copy "$(ProjectDir)$(OutDir)*.dll"  "%25addinPath%25"
+
+	</PostBuildEvent>
   </PropertyGroup>
 </Project>
