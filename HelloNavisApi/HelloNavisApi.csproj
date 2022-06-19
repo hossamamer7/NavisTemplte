@@ -154,8 +154,8 @@
 		SET PARENTFOLDER=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\%25PLUGINVERSION%25
 		SET PLUGINFOLDER=%25PARENTFOLDER%25\%25PLUGINNAME%25
 
-		set path=D:\HelloNavisApi\HelloNavisApi\HelloNavisApi\HelloNavis.xaml
-		set images=D:\HelloNavisApi\HelloNavisApi\HelloNavisApi\Images
+		set path=D:\Navis Template\NavisTemplte\HelloNavisApi\HelloNavis.xaml
+		set images=D:\Navis Template\NavisTemplte\HelloNavisApi\Images
 
 		set addinPath=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\HelloNavisApi\
 		set addinPath1=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\HelloNavisApi\en-US\
