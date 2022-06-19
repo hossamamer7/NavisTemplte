@@ -1,0 +1,6 @@
+C:\Users\Lenovo\source\repos\HelloNavisApi\HelloNavisApi\bin\Debug2019\HelloNavisApi.dll
+C:\Users\Lenovo\source\repos\HelloNavisApi\HelloNavisApi\bin\Debug2019\HelloNavisApi.pdb
+C:\Users\Lenovo\source\repos\HelloNavisApi\HelloNavisApi\obj\Debug2019\HelloNavisApi.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\HelloNavisApi\HelloNavisApi\obj\Debug2019\HelloNavisApi.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\HelloNavisApi\HelloNavisApi\obj\Debug2019\HelloNavisApi.dll
+C:\Users\Lenovo\source\repos\HelloNavisApi\HelloNavisApi\obj\Debug2019\HelloNavisApi.pdb

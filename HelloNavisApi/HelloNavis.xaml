@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RibbonControl
+  xmlns="clr-namespace:Autodesk.Windows;assembly=AdWindows"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:local="clr-namespace:Autodesk.Navisworks.Gui.Roamer.AIRLook;assembly=navisworks.gui.roamer"
+  xmlns:system="clr-namespace:System;assembly=mscorlib">
+  <RibbonTab
+    Title="Hello Navis"
+    Id="ID_HelloNavis_1"
+    KeyTip="T1">
+    <RibbonPanel x:Uid="UID_HelloNavis_PANEL">
+      <RibbonPanelSource x:Uid="UID_HelloNavis_TAB_HelloNavis_SOURCE" Title="Hello Navis">
+        <local:NWRibbonButton
+          x:Uid="UID_Button_1"
+          Id="ID_Button_1"
+          Orientation="Vertical"
+          ShowText="True"
+          Size="Large" />
+      </RibbonPanelSource>
+    </RibbonPanel>
+
+  </RibbonTab>
+</RibbonControl>

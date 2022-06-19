@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58D1D3CC-64EF-4DA7-B9F4-3F934B8A1EFF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HelloNavisApi</RootNamespace>
+    <AssemblyName>HelloNavisApi</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.EndsWith('2019'))">
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.EndsWith('2020'))">
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.EndsWith('2021'))">
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.EndsWith('2022'))">
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.EndsWith('2023'))">
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.StartsWith('Debug20'))">
+    <NavisVersion>$(Configuration.Substring(5, 4))</NavisVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.StartsWith('Release20'))">
+    <NavisVersion>$(Configuration.Substring(7, 4))</NavisVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.StartsWith('Debug20'))">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug$(NavisVersion)\</OutputPath>
+    <DefineConstants>TRACE;Navisworks Manage(NavisVersion);DEBUG;DEBUG$(NavisVersion)</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(Configuration.StartsWith('Release20'))">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release$(NavisVersion)\</OutputPath>
+    <DefineConstants>TRACE;Navisworks Manage(NavisVersion);RELEASE$(NavisVersion)</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2019|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;Navisworks Manage2019;DEBUG2019</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2020|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;Navisworks Manage2020;DEBUG2020</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2021|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;Navisworks Manage2021;DEBUG2021</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2022|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;Navisworks Manage2022;DEBUG2022</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2023|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;Navisworks Manage2023;DEBUG2023</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2019|AnyCPU'">
+    <DefineConstants>TRACE;Navisworks Manage2019;RELEASE2019</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2020|AnyCPU'">
+    <DefineConstants>TRACE;Navisworks Manage2020;RELEASE2020</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2021|AnyCPU'">
+    <DefineConstants>TRACE;Navisworks Manage2021;RELEASE2021</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2022|AnyCPU'">
+    <DefineConstants>TRACE;Navisworks Manage2022;RELEASE2022</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release2023|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE;Navisworks Manage2023;RELEASE2023</DefineConstants>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AdWindows, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>$(ProgramW6432)\Autodesk\Navisworks Manage $(NavisVersion)\AdWindows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Autodesk.Navisworks.Api , Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>$(ProgramW6432)\Autodesk\Navisworks Manage $(NavisVersion)\Autodesk.Navisworks.Api.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Autodesk.Navisworks.Automation, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>$(ProgramW6432)\Autodesk\Navisworks Manage $(NavisVersion)\Autodesk.Navisworks.Automation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="navisworks.gui.roamer, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>$(ProgramW6432)\Autodesk\Navisworks Manage $(NavisVersion)\navisworks.gui.roamer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="HelloNavis.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>echo Configuration: $(Configuration)
+
+SET PLUGINNAME=HelloNavisApi0.1.0.0
+SET ROOTFOLDER=%25Program Files%2525
+SET PLUGINVERSION=$(Configuration)
+SET PLUGINVERSION=%25PLUGINVERSION:Debug=%25
+SET PLUGINVERSION=%25PLUGINVERSION:Release=%25
+
+SET PARENTFOLDER=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\%25PLUGINVERSION%25
+SET PLUGINFOLDER=%25PARENTFOLDER%25\%25PLUGINNAME%25
+
+
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

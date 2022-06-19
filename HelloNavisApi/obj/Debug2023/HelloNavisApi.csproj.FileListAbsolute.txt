@@ -1,0 +1,12 @@
+C:\Users\Lenovo\source\repos\HelloNavisApi\HelloNavisApi\bin\Debug2023\HelloNavisApi.dll
+C:\Users\Lenovo\source\repos\HelloNavisApi\HelloNavisApi\bin\Debug2023\HelloNavisApi.pdb
+C:\Users\Lenovo\source\repos\HelloNavisApi\HelloNavisApi\obj\Debug2023\HelloNavisApi.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\HelloNavisApi\HelloNavisApi\obj\Debug2023\HelloNavisApi.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\HelloNavisApi\HelloNavisApi\obj\Debug2023\HelloNavisApi.dll
+C:\Users\Lenovo\source\repos\HelloNavisApi\HelloNavisApi\obj\Debug2023\HelloNavisApi.pdb
+D:\HelloNavisApi\HelloNavisApi\HelloNavisApi\bin\Debug2023\HelloNavisApi.dll
+D:\HelloNavisApi\HelloNavisApi\HelloNavisApi\bin\Debug2023\HelloNavisApi.pdb
+D:\HelloNavisApi\HelloNavisApi\HelloNavisApi\obj\Debug2023\HelloNavisApi.csproj.AssemblyReference.cache
+D:\HelloNavisApi\HelloNavisApi\HelloNavisApi\obj\Debug2023\HelloNavisApi.csproj.CoreCompileInputs.cache
+D:\HelloNavisApi\HelloNavisApi\HelloNavisApi\obj\Debug2023\HelloNavisApi.dll
+D:\HelloNavisApi\HelloNavisApi\HelloNavisApi\obj\Debug2023\HelloNavisApi.pdb
