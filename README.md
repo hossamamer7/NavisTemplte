@@ -6,4 +6,3 @@ It supports Navisworks versions 2019, 2020, 2021, 2022, 2023 and It will be cont
 
 # Guideline 
 - You have to run the visual studio as an adminstrator so the files could be copied.
-- You have to change the solution location in the Post Build Event.
