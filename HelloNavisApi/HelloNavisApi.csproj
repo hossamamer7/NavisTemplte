@@ -154,20 +154,26 @@
 		SET PARENTFOLDER=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\%25PLUGINVERSION%25
 		SET PLUGINFOLDER=%25PARENTFOLDER%25\%25PLUGINNAME%25
 
-		set addinPath=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\DiRoots.Navisworks\
-		set addinPath1=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\DiRoots.Navisworks\en-US\
-		set addinPath2=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\DiRoots.Navisworks\pt-PT\
+		set addinPath=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\NavisTemplate\
+		set addinPath1=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\NavisTemplate\en-US\
+		set addinPath2=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\NavisTemplate\pt-BR\
+		set addinPath3=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\NavisTemplate\fr-FR\
+		set addinPath4=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\NavisTemplate\it-IT\
 
-		set imagesPath=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\DiRoots.Navisworks\Images\
+		set imagesPath=C:\Program Files\Autodesk\Navisworks Manage $(NavisVersion)\Plugins\NavisTemplate\Images\
 
 		mkdir "%25addinPath1%25"
 		mkdir "%25addinPath2%25"
+		mkdir "%25addinPath3%25"
+		mkdir "%25addinPath4%25"
 
 		mkdir "%25imagesPath%25"
 
 		copy "$(ProjectDir)*.xaml" "%25addinPath%25"
 		copy "$(ProjectDir)*.xaml" "%25addinPath1%25"
 		copy "$(ProjectDir)*.xaml" "%25addinPath2%25"
+		copy "$(ProjectDir)*.xaml" "%25addinPath3%25"
+		copy "$(ProjectDir)*.xaml" "%25addinPath4%25"
 
 		copy "$(ProjectDir)Images\*" "%25imagesPath%25"
 		copy "$(ProjectDir)$(OutDir)*.dll"  "%25addinPath%25"
